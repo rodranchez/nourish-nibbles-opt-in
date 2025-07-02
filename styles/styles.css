@@ -91,13 +91,13 @@ p, span, li, cite, blockquote {
     text-align: left;
 }
 .hero-left h6 {
-    color: #757575;
+    color: #FF6D25;
 }
 .hero-left h1 {
-    color: #797979;
+    color: #3F3F3F;
 }
 .hero-left h1 .highlight {
-    color: #A39595;
+    color: #FF6D25;
     font-weight: 900; /* Ensure the highlight span is bold like the rest of h1 */
 }
 .cta-button {
@@ -171,6 +171,12 @@ p, span, li, cite, blockquote {
     justify-content: center;
     text-align: left;
 }
+.benefits-right h2 {
+    color: #FF6D25;
+}
+.benefits-right p {
+    color: #3F3F3F;
+}
 .benefits-list {
     list-style: none;
     display: flex;
@@ -181,6 +187,7 @@ p, span, li, cite, blockquote {
     display: flex;
     align-items: center;
     gap: 8px;
+    color: #3F3F3F;
 }
 .checkmark-svg {
     width: 20px;
@@ -273,11 +280,11 @@ p, span, li, cite, blockquote {
 }
 .accordion-question {
     font-weight: bold;
-    color: #434343;
+    color: #3F3F3F;
 }
 .accordion-answer {
     display: none;
-    color: #616161;
+    color: #3F3F3F;
 }
 .accordion-icon svg {
     width: 16.79px;
