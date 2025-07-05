@@ -444,4 +444,111 @@ hr {
         font-weight: 400;
     }
 }
+/* Pop-up overlay */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black for darkening */
+    display: none; /* Hidden by default */
+    z-index: 999; /* Below pop-up but above other content */
+}
 
+/* Pop-up container */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the pop-up */
+    background: #F2F2F2; /* Background color */
+    padding: 64px; /* 64px padding top/bottom/left/right */
+    display: none; /* Hidden by default */
+    z-index: 1000; /* Above overlay */
+    max-width: 720px; /* Limit width */
+    width: 90%; /* Responsive width */
+    box-sizing: border-box;
+}
+
+/* Close button */
+.popup-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #3F3F3F;
+}
+
+/* Pop-up heading */
+.popup h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900; /* Poppins 900 for headings */
+    font-size: 3rem; /* Match your h2 styling */
+    line-height: 1.2;
+    margin: 0 0 48px 0; /* 48px gap below heading */
+    text-align: center;
+    color: #FF6D25; /* Match your h2 color */
+}
+
+/* Pop-up input fields */
+.popup input {
+    display: block;
+    width: 100%; /* Full width minus padding */
+    padding: 12px;
+    margin-bottom: 24px; /* 24px gap between inputs and button */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400; /* Poppins 400 for normal text */
+    font-size: 1rem; /* Match your p font size */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Pop-up submit button */
+.popup-submit {
+    width: 100%;
+    background: #FF6D25; /* Button color */
+    color: #F2F2F2; /* Text color */
+    border: none;
+    border-radius: 8px; /* Corner radius */
+    padding: 12px; /* 12px top/bottom padding */
+    cursor: pointer;
+    text-align: center;
+}
+
+.popup-submit h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900; /* Match your h6 styling */
+    font-size: 1.25rem; /* Match your h6 font size */
+    line-height: 1.4;
+    color: #F2F2F2;
+    margin: 0;
+}
+
+.popup-submit:hover {
+    background: #e65e20; /* Slightly darker on hover */
+}
+
+/* Show pop-up and overlay */
+.popup.active, .popup-overlay.active {
+    display: block;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    .popup {
+        padding: 32px; /* Reduced padding for smaller screens */
+    }
+    .popup h2 {
+        font-size: 2.25rem; /* Match your mobile h2 styling */
+    }
+    .popup-submit h6 {
+        font-size: 1.125rem; /* Match your mobile h6 styling */
+    }
+}
